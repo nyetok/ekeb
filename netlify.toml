@@ -3,5 +3,5 @@
   publish = "public/"
   functions = "functions/"
 
-plugins:
-  - package: netlify-plugin-chromium
+[[plugins]]
+package = "netlify-plugin-chromium"
