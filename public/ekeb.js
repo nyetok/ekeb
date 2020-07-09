@@ -1,6 +1,6 @@
 const chromium = require('chrome-aws-lambda');
 
-async function main() {
+exports.handler = async (event, context) => {
   const browser = await chromium.puppeteer.launch({
     headless: chromium.headless,
     args: chromium.args,
@@ -24,4 +24,4 @@ async function main() {
   browser.close();
 }
 
-main();
+
