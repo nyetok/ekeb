@@ -1,5 +1,5 @@
 const chromium = require('chrome-aws-lambda');
-
+const puppeteer = require('puppeteer-core');
 exports.handler = async (event, context) => {
 
     const pageToScreenshot = JSON.parse(event.body).pageToScreenshot;
