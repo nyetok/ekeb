@@ -2,8 +2,9 @@ const chromium = require('chrome-aws-lambda');
 
 exports.handler = async (event, context) => {
   const browser = await chromium.puppeteer.launch({
+    executablePath: await chromium.executablePath,
+        args: chromium.args,
     headless: chromium.headless,
-    args: chromium.args,
   });
   //const tab = await browser.newPage();
   //const text = await (await tab.goto("http://example.com/")).text();
