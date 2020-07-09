@@ -16,13 +16,16 @@ exports.handler = async (event, context) => {
 
   await page.type('#no_ic','841227035133')
   await page.type('#katalaluan','e-Aduan@2018')
-
+ 
+  await page.click('button.Submit2'),
+  await page.waitForNavigation({ waitUntil: 'networkidle2' })
+  
     await Promise.all([
     page.click('button.Submit2'),
     page.waitForNavigation({ waitUntil: 'networkidle2' }),
 ]);
   
-  browser.close();
+  await browser.close();
 }
 
 
